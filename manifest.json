@@ -1,0 +1,33 @@
+{
+    "workshop": {
+        "title": "Autonomous Mobile Cloud Enterprise - Intelligent Bot: Hands-On Workshop",
+        "description": "",
+        "theme": "default",
+        "labs": [
+            {
+                "number": "0",
+                "filename": "README.md",
+                "title": "Read Me First",
+                "description": "Autonomous Mobile Cloud Enterprise - Intelligent Bot Overview"
+            },
+            {
+                "number": "100",
+                "filename": "Lab100.md",
+                "title": "Lab 100: Getting Started with Intelligent Bot",
+                "description": "Understand Intelligent Bot UI, import a chatbot, and look at basics of a chatbot"
+            },
+            {
+                "number": "200",
+                "filename": "Lab200.md",
+                "title": "Lab 200: Enhance Nom Nom Pizza Bot",
+                "description": "Enhancement of the chatbot by adding intent, instant app, and custom component"
+            },
+            {
+                "number": "300",
+                "filename": "Lab300.md",
+                "title": "Lab 300: Create Channel and Interact with Chatbot on Website",
+                "description": "Create a channel and interact with chatbot on a website"
+            }
+        ]
+    }
+}

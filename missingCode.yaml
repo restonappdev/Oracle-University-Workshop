@@ -1,0 +1,113 @@
+78        OrderStatus: "checkLastOrder"
+233       next: "setOrderTime" -> next: "selectRestaurant"
+234  selectRestaurant: 
+    component: "FindRestaurants"
+    properties: 
+      longitude: "${location.value.longitude}"
+      latitude: "${location.value.latitude}"
+      actionType: "select"
+    transitions: {}
+  confirmRestaurant: 
+    component: "FindRestaurants"
+    properties: 
+      longitude: "${location.value.longitude}"
+      latitude: "${location.value.latitude}"
+      actionType: "confirm"
+    transitions: {}
+
+252 + to text
+, and it has been sent to ${restLocation}
+
+263      return: "done" -> transitions: {}
+264  survey:
+    component: "System.Interactive"
+    properties:
+      prompt: "We'd love to hear from you! Please tap the link to take a 10 sec customer survey!"
+      sourceVariableList: ""
+      variable: ""
+      id: "nom_nom_survey"
+    transitions:
+      actions:
+        cancel: "thank"
+      next: "thank"
+  thank:
+    component: "System.Output"
+    properties:
+      text: "Thank you for your feedback!"
+    transitions:
+      return: "done"
+265   checkLastOrder:
+    component: "System.ConditionExists"
+    properties:
+      variable: "user.orderTime"
+    transitions:
+      actions:
+        exists: "setRemainingTime"
+        notexists: "noOrder"
+  setRemainingTime:
+    component: "System.SetVariable"
+    properties:
+      variable: "timeRemaining"
+      value: "${((120000-(.now?long-user.orderTime?number))/1000)?floor}"
+    transitions: {}
+  orderStatus:
+    component: "System.Switch"
+    properties:
+      source: "<#if (timeRemaining?number >= 100)>1<#elseif (timeRemaining?number < 100 && timeRemaining?number >= 80)>2<#elseif (timeRemaining?number < 80 && timeRemaining?number >= 60)>3<#elseif (timeRemaining?number < 60 && timeRemaining?number >= 40)>4<#elseif (timeRemaining?number < 40 && timeRemaining?number > 0)>5<#elseif (timeRemaining?number >= 0)>6</#if>"
+      values:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+    transitions:
+      actions:
+        1: "orderStatusReceived"
+        2: "orderStatusPrep"
+        3: "orderStatusBake"
+        4: "orderStatusBox"
+        5: "orderStatusDelivery"
+        6: "orderStatusDelivered"
+  orderStatusReceived:
+    component: "System.Output"
+    properties:
+      text: "Your order #${user.orderTime?number%1000000} has been received. We will start making your delicious pizza shortly. It will be delivered in ${timeRemaining} seconds."
+    transitions:
+      return: "done"
+  orderStatusPrep:
+    component: "System.Output"
+    properties:
+      text: "We are preping amazingly fresh ingredients for your order #${user.orderTime?number%1000000}. It will be delivered in ${timeRemaining} seconds."
+    transitions:
+      return: "done"
+  orderStatusBake:
+    component: "System.Output"
+    properties:
+      text: "Your pizza is in the oven! Mmm, it smells good! It will be delivered in ${timeRemaining} seconds."
+    transitions:
+      return: "done"
+  orderStatusBox:
+    component: "System.Output"
+    properties:
+      text: "Your order #${user.orderTime?number%1000000} is being boxed right now! Await amazingness! It will be delivered in ${timeRemaining} seconds."
+    transitions:
+      return: "done"
+  orderStatusDelivery:
+    component: "System.Output"
+    properties:
+      text: "Our fast and furious driver is delivering your order #${user.orderTime?number%1000000}. It will be delivered in ${timeRemaining} seconds."
+    transitions:
+      return: "done"
+  orderStatusDelivered:
+    component: "System.Output"
+    properties:
+      text: "Your order #${user.orderTime?number%1000000} has been delivered! Thank you for choosing Nom Nom Pizza! To place another order, say order pizza."
+    transitions:
+      return: "done"
+  noOrder:
+    component: "System.Output"
+    properties:
+      text: "Sorry we can't find your order. Please make an order first!"
+    transitions:
+      return: "done"
