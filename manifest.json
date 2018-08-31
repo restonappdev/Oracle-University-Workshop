@@ -14,18 +14,30 @@
                 "number": "100",
                 "filename": "Lab100.md",
                 "title": "Lab 100: Getting Started with Intelligent Bot",
-                "description": "Understand Intelligent Bot UI, import a chatbot, and look at basics of a chatbot"
+                "description": "Understand Intelligent Bot UI, import a chatbot, look at basics of a chatbot and add intent"
             },
             {
                 "number": "200",
                 "filename": "Lab200.md",
-                "title": "Lab 200: Enhance Nom Nom Pizza Bot",
-                "description": "Enhancement of the chatbot by adding intent, instant app, and custom component"
+                "title": "Lab 200: Enhance Gen University Bot",
+                "description": "Enhancement of the chatbot by custom component, and backend & APIs"
             },
             {
                 "number": "300",
                 "filename": "Lab300.md",
-                "title": "Lab 300: Create Channel and Interact with Chatbot on Website",
+                "title": "Lab 300: Set up FAQ Service - Q&A Tranning",
+                "description": "Lab 300: Set up FAQ Service - Q&A Tranning"
+            },
+            {
+                "number": "400",
+                "filename": "Lab400.md",
+                "title": "Lab 400: Create Channel and Interact with Chatbot on Facebook",
+                "description": "Create a channel and interact with chatbot on a Facebook"
+            },
+            {
+                "number": "500",
+                "filename": "Lab500.md",
+                "title": "Lab 500: Create Channel and Interact with Chatbot on Website",
                 "description": "Create a channel and interact with chatbot on a website"
             }
         ]
