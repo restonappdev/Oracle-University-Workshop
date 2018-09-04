@@ -1,51 +1,43 @@
 {
    "actionList": [
       {
-         "elementTrigger": "starRating_1",
+         "elementTrigger": "close",
          "enabled": true,
          "eventTrigger": "valueChanged",
          "ids": [
-            "OneTwoThree"
+            "close"
          ],
-         "trigger": "value",
-         "triggerValue": "3",
-         "type": "showElements"
+         "trigger": "paneValid",
+         "type": "hideElements"
       },
       {
-         "elementTrigger": "button_1",
+         "elementTrigger": "close",
          "enabled": true,
          "eventTrigger": "valueChanged",
          "parameters": [
             {
-               "name": "",
-               "value": ""
+               "name": "username",
+               "value": "{username}"
+            },
+            {
+               "name": "password",
+               "value": "{password}"
             }
          ],
          "trigger": "paneValid",
          "type": "exitToBot"
-      },
-      {
-         "elementTrigger": "button_1",
-         "enabled": true,
-         "eventTrigger": "valueChanged",
-         "ids": [
-            "button_1",
-            "label_1"
-         ],
-         "trigger": "paneValid",
-         "type": "toggleVisibility"
       }
    ],
    "authList": [
    ],
    "chatbox": {
       "active": true,
-      "build": 8,
+      "build": 3,
       "builder": {
-         "editCount": 73
+         "editCount": 30
       },
-      "code": "nom_nom_survey",
-      "id": 1,
+      "code": "Copy_of_HCM_Login",
+      "id": 6,
       "trashed": false
    },
    "displayList": [
@@ -56,10 +48,19 @@
                "actionList": [
                ],
                "detail": {
-                  "src": "/upload/s3?k=public%2FO302%2Fschema%2F0LaA%2F6l0v%2FLkPYiSaA8ZYqKZ23CgXelAlTrBfXMCgQjj84kIrpJ7xXN8Yqnc5jVOnNYu6cSHp1VqjlOuAbsevOiQ%3D%3D%2Fnom-nom-pizza-logo-b.png",
-                  "type": "image"
+                  "agentCanEdit": false,
+                  "agentMasked": false,
+                  "allowCallback": true,
+                  "customerCanEdit": true,
+                  "parameterizedUrl": "https://hcm-login.herokuapp.com?callback=",
+                  "parameters": [
+                  ],
+                  "required": false,
+                  "showAgent": true,
+                  "showUrl": false,
+                  "type": "iframe"
                },
-               "id": "image_1",
+               "id": "embeddedWebsite_1",
                "initiallyEnabled": true,
                "initiallyVisible": true,
                "innerStyles": {
@@ -67,15 +68,15 @@
                   "borderColor": "#333",
                   "borderRadius": "0px",
                   "borderStyle": "solid",
-                  "borderWidth": "0px",
+                  "borderWidth": "2px",
                   "color": "#333333",
                   "elementClass": "",
                   "fontSize": "13px",
                   "fontStyle": "normal",
                   "fontWeight": "normal",
+                  "height": "500px",
                   "labelClass": "",
-                  "textAlign": "left",
-                  "width": "90%"
+                  "textAlign": "left"
                },
                "outerStyles": {
                   "marginBottom": "12px",
@@ -113,90 +114,121 @@
                      "validateRegex": false,
                      "validateSnippet": false
                   },
-                  "icons": [
-                     "fa-star",
-                     "fa-star",
-                     "fa-star",
-                     "fa-star",
-                     "fa-star"
-                  ],
-                  "label": "How was your customer service experience?",
+                  "label": "username",
                   "labelInline": false,
-                  "leftIcon": "fa-frown-o",
-                  "required": false,
-                  "rightIcon": "fa-smile-o",
-                  "type": "stars"
-               },
-               "id": "starRating_1",
-               "initiallyEnabled": true,
-               "initiallyVisible": true,
-               "innerStyles": {
-                  "backgroundColor": "#FFFFFF",
-                  "borderColor": "#333",
-                  "borderRadius": "0px",
-                  "borderStyle": "solid",
-                  "borderWidth": "0px",
-                  "color": "#333333",
-                  "elementClass": "",
-                  "fontSize": "20px",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                  "labelClass": "",
-                  "textAlign": "center"
-               },
-               "outerStyles": {
-                  "marginBottom": "12px",
-                  "marginLeft": "0",
-                  "marginRight": "0",
-                  "marginTop": "0",
-                  "paddingBottom": "0",
-                  "paddingLeft": "0",
-                  "paddingRight": "0",
-                  "paddingTop": "0",
-                  "width": "100%"
-               },
-               "since": 0,
-               "tooltip": ""
-            },
-            {
-               "actionList": [
-               ],
-               "detail": {
-                  "agentCanEdit": false,
-                  "agentMasked": false,
-                  "customerCanEdit": true,
-                  "elementValidation": {
-                     "maxLength": 0,
-                     "maxLengthErrorMessage": "This field does not accept more than {$count} characters.",
-                     "minLength": 0,
-                     "minLengthErrorMessage": "This field requires at least {$count} characters.",
-                     "regex": "",
-                     "regexErrorMessage": "",
-                     "required": false,
-                     "requiredErrorMessage": "This is required",
-                     "snippet": "",
-                     "validateMaxLength": false,
-                     "validateMinLength": false,
-                     "validateRegex": false,
-                     "validateSnippet": false
-                  },
-                  "errorMessage": "An error has occurred",
-                  "label": "Comment",
-                  "maxLength": 1000,
+                  "maxLength": 256,
                   "placeholder": "",
                   "required": false,
-                  "rows": 5,
-                  "type": "multiLineInput"
+                  "type": "singleLineInput"
                },
-               "id": "OneTwoThree",
+               "id": "username",
                "initiallyEnabled": true,
-               "initiallyVisible": true,
+               "initiallyVisible": false,
                "innerStyles": {
                   "backgroundColor": "#FFFFFF",
                   "borderColor": "#ccc",
                   "borderRadius": "4px",
                   "borderStyle": "solid",
                   "borderWidth": "1px",
+                  "color": "#333333",
+                  "elementClass": "",
+                  "fontSize": "13px",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                  "labelClass": "",
+                  "textAlign": "left"
+               },
+               "outerStyles": {
+                  "marginBottom": "12px",
+                  "marginLeft": "0",
+                  "marginRight": "0",
+                  "marginTop": "0",
+                  "paddingBottom": "0",
+                  "paddingLeft": "0",
+                  "paddingRight": "0",
+                  "paddingTop": "0",
+                  "width": "100%"
+               },
+               "since": 0,
+               "tooltip": ""
+            },
+            {
+               "actionList": [
+               ],
+               "detail": {
+                  "agentCanEdit": false,
+                  "agentMasked": false,
+                  "customerCanEdit": true,
+                  "elementValidation": {
+                     "maxLength": 0,
+                     "maxLengthErrorMessage": "This field does not accept more than {$count} characters.",
+                     "minLength": 0,
+                     "minLengthErrorMessage": "This field requires at least {$count} characters.",
+                     "regex": "",
+                     "regexErrorMessage": "",
+                     "required": false,
+                     "requiredErrorMessage": "This is required",
+                     "snippet": "",
+                     "validateMaxLength": false,
+                     "validateMinLength": false,
+                     "validateRegex": false,
+                     "validateSnippet": false
+                  },
+                  "label": "password",
+                  "labelInline": false,
+                  "maxLength": 256,
+                  "placeholder": "",
+                  "required": false,
+                  "type": "singleLineInput"
+               },
+               "id": "password",
+               "initiallyEnabled": true,
+               "initiallyVisible": false,
+               "innerStyles": {
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#ccc",
+                  "borderRadius": "4px",
+                  "borderStyle": "solid",
+                  "borderWidth": "1px",
+                  "color": "#333333",
+                  "elementClass": "",
+                  "fontSize": "13px",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                  "labelClass": "",
+                  "textAlign": "left"
+               },
+               "outerStyles": {
+                  "marginBottom": "12px",
+                  "marginLeft": "0",
+                  "marginRight": "0",
+                  "marginTop": "0",
+                  "paddingBottom": "0",
+                  "paddingLeft": "0",
+                  "paddingRight": "0",
+                  "paddingTop": "0",
+                  "width": "100%"
+               },
+               "since": 0,
+               "tooltip": ""
+            },
+            {
+               "actionList": [
+               ],
+               "detail": {
+                  "generatedHtml": "<p>Login successful! Click <strong>Close</strong> and return back to chatbot screen.</p>\n",
+                  "text": "Login successful! Click **Close** and return back to chatbot screen.",
+                  "type": "markdown"
+               },
+               "id": "success1",
+               "initiallyEnabled": true,
+               "initiallyVisible": false,
+               "innerStyles": {
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#333",
+                  "borderRadius": "0px",
+                  "borderStyle": "solid",
+                  "borderWidth": "0px",
                   "color": "#333333",
                   "elementClass": "",
                   "fontSize": "13px",
@@ -242,13 +274,13 @@
                      "validateRegex": false,
                      "validateSnippet": false
                   },
-                  "label": "Submit",
+                  "label": "Close",
                   "required": false,
                   "type": "button"
                },
-               "id": "button_1",
+               "id": "close",
                "initiallyEnabled": true,
-               "initiallyVisible": true,
+               "initiallyVisible": false,
                "innerStyles": {
                   "backgroundColor": "#598EC7",
                   "borderColor": "#333",
@@ -262,45 +294,6 @@
                   "fontWeight": "normal",
                   "labelClass": "",
                   "textAlign": "center"
-               },
-               "outerStyles": {
-                  "marginBottom": "12px",
-                  "marginLeft": "0",
-                  "marginRight": "0",
-                  "marginTop": "0",
-                  "paddingBottom": "0",
-                  "paddingLeft": "0",
-                  "paddingRight": "0",
-                  "paddingTop": "0",
-                  "width": "100%"
-               },
-               "since": 0,
-               "tooltip": ""
-            },
-            {
-               "actionList": [
-               ],
-               "detail": {
-                  "generatedHtml": "<p>Thank you for your feedback! You can close this window now.</p>\n",
-                  "text": "Thank you for your feedback! You can close this window now.",
-                  "type": "markdown"
-               },
-               "id": "label_1",
-               "initiallyEnabled": true,
-               "initiallyVisible": false,
-               "innerStyles": {
-                  "backgroundColor": "#FFFFFF",
-                  "borderColor": "#333",
-                  "borderRadius": "0px",
-                  "borderStyle": "solid",
-                  "borderWidth": "0px",
-                  "color": "#333333",
-                  "elementClass": "",
-                  "fontSize": "13px",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                  "labelClass": "",
-                  "textAlign": "left"
                },
                "outerStyles": {
                   "marginBottom": "12px",
@@ -330,18 +323,24 @@
    ],
    "general": {
       "author": "Unknown",
-      "created": "Thu Jul 12 2018",
-      "icon": "https://cdn.tetrapod.io/chatbox/template-images/customer_survey.png",
-      "internalDescription": "Get feedback from your customers and collect email to follow up on their experience",
+      "created": "Fri Aug 03 2018",
+      "icon": "https://cdn.tetrapod.io/chatbox/template-images/blank.png",
       "inviteMessageList": [
-         "Click to take the survey {link}"
+         "Click to join this Instant App {link}"
       ],
-      "name": "Nom Nom Survey",
-      "previewIcon": "/upload/s3?k=public%2FO302%2Fschema%2FmPjJ%2FghKy%2F3AaJ4j5YuAY9mW9rSd5yISV30kaiklHxR5vGQpRMc9suF-c9Ofeh5TIocF8FyauURi7YMpTJM4cVrw%3D%3D%2Fnom-nom-pizza-logo-b.png",
-      "previewText": "Survey",
-      "windowTitle": "Nom Nom Pizza Customer Survey"
+      "name": "HCM Login Tests"
    },
    "snippetList": [
+      {
+         "elementTrigger": "embeddedWebsite_1",
+         "eventTrigger": "valueChanged",
+         "snippetCode": "obj = JSON.parse(newValue);\napp.setElementValue(\"username\",obj.username);\napp.setElementValue(\"password\",obj.password);\napp.showElements(\"success1\", \"close\");\nchatbox.openWebsite(\"ubot://\",\"Click open to return to the app.\")"
+      },
+      {
+         "eventNameTrigger": "new_trigger",
+         "eventTrigger": "callback",
+         "snippetCode": ""
+      }
    ],
    "version": 6
 }
