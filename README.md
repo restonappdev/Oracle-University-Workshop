@@ -9,7 +9,7 @@ This workshop walks you through all the steps to get started with using **Autono
 ## Goals
 - Understand AMCe features
 - Create a new chatbot
-- Learn how to add intent & entities to chatbot
+- Learn about Intent & Entities for chatbot
 - Learn how to add services & components to enhance chatbot
 - Learn how to add Q&A functionality
 - Learn how to add a new channel
