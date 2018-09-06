@@ -1,10 +1,11 @@
 ![](images/logo.png)  
 # Autonomous Mobile Cloud Enterprise - Intelligent Bot: Hands-On Workshop
 
-This workshop walks you through all the steps to get started with using **Autonomous Mobile Cloud Enterprise (AMCe)** and guide you to create your first chatbot using the **Intelligent Bot** feature of AMCe. You will learn to create an university chatbot, utilize its extensive functionalities to build workflow, configure backend & api, train FAQ/Q&A module, finally interact with different channels, such as website, facebook etc, Gen University Bot. 
+This workshop walks you through all the steps to get started with using **Autonomous Mobile Cloud Enterprise (AMCe)** and guide you to create your first chatbot using the **Intelligent Bot** feature of AMCe. You will learn to create an university chatbot, utilize its extensive functionalities to build workflow, configure backend & API, Train Q&A framework, finally interact with different channels, such as website, facebook.
 
-## Gen University Bot features:
-
+## Gen University Bot main features:
+- Help adminstrators/HR from university to get or update student basic information, such as address, email, phone.
+- Help visitors to get FAQ answers, such as meal plan, where is the library.
 
 ## Goals
 - Understand AMCe features
