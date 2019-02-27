@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Autonomous Mobile Cloud Enterprise - Intelligent Bot: Hands-On Workshop",
+        "title": "Oracle Autonomous Digital Assistant: Hands-On Workshop",
         "description": "",
         "theme": "default",
         "labs": [
@@ -8,19 +8,19 @@
                 "number": "0",
                 "filename": "README.md",
                 "title": "Read Me First",
-                "description": "Autonomous Mobile Cloud Enterprise - Intelligent Bot Overview"
+                "description": "Oracle Autonomous Digital Assistant Overview"
             },
             {
                 "number": "100",
                 "filename": "Lab100.md",
-                "title": "Lab 100: Getting Started with Intelligent Bot",
-                "description": "Understand Intelligent Bot UI, import a chatbot, look at basics of a chatbot and add intent"
+                "title": "Lab 100: Getting Started with DA Skill",
+                "description": "Understand DA Skill UI, import a skill, look at basics of a skill and add intent"
             },
             {
                 "number": "200",
                 "filename": "Lab200.md",
                 "title": "Lab 200: Enhance Gen University Bot",
-                "description": "Enhancement of the chatbot by custom component, and backend & APIs"
+                "description": "Enhancement of the skill by custom component, and backend & APIs"
             },
             {
                 "number": "300",
@@ -31,14 +31,14 @@
             {
                 "number": "400",
                 "filename": "Lab400.md",
-                "title": "Lab 400: Create Channel and Interact with Chatbot on Facebook",
-                "description": "Create a channel and interact with chatbot on a Facebook"
+                "title": "Lab 400: Create Channel and Interact with Skill on Facebook",
+                "description": "Create a channel and interact with skill on a Facebook"
             },
             {
                 "number": "500",
                 "filename": "Lab500.md",
-                "title": "Lab 500: Create Channel and Interact with Chatbot on Website",
-                "description": "Create a channel and interact with chatbot on a website"
+                "title": "Lab 500: Create Channel and Interact with Skill on Website",
+                "description": "Create a channel and interact with skill on a website"
             }
         ]
     }
